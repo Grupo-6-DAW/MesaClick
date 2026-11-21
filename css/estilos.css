@@ -1,0 +1,224 @@
+/* Paleta de colores y variables globales de MesaClick */
+:root {
+  --color-primario: #c2410c;
+  --color-primario-oscuro: #9a3412;
+  --color-secundario: #1f2937;
+  --color-fondo: #faf7f2;
+  --color-superficie: #ffffff;
+  --color-texto: #1f2937;
+  --color-texto-suave: #4b5563;
+  --color-borde: #e5e7eb;
+  --color-acento-suave: #fef3c7;
+}
+
+/* Selectores de etiqueta */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--color-secundario);
+  color: var(--color-superficie);
+  border-bottom: 4px solid var(--color-primario);
+}
+
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-texto-suave);
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+footer {
+  background-color: var(--color-secundario);
+  color: var(--color-borde);
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Selectores de ID */
+#encabezado-principal {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#menu-navegacion {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+#seccion-bienvenida {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+#formulario-reserva {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+#pie-pagina p {
+  color: var(--color-borde);
+  margin-bottom: 0;
+}
+
+/* Selectores de clase */
+.contenedor {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.marca {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-superficie);
+  text-decoration: none;
+}
+
+.marca span {
+  color: #fb923c;
+}
+
+.enlace-nav {
+  color: var(--color-superficie);
+  text-decoration: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.enlace-nav:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.enlace-nav.activo {
+  background-color: var(--color-primario);
+  color: var(--color-superficie);
+}
+
+.tarjeta {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(31, 41, 55, 0.06);
+}
+
+.imagen-destacada {
+  border-radius: 10px;
+  border: 1px solid var(--color-borde);
+}
+
+.lista-beneficios li {
+  margin-bottom: 0.5rem;
+  color: var(--color-texto);
+}
+
+.boton-principal {
+  display: inline-block;
+  background-color: var(--color-primario);
+  color: var(--color-superficie);
+  text-decoration: none;
+  padding: 0.75rem 1.35rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton-principal:hover {
+  background-color: var(--color-primario-oscuro);
+}
+
+.grupo-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.grupo-campo label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-texto);
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus,
+.grupo-campo textarea:focus {
+  outline: 2px solid var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+.fila-campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.nota-estado {
+  background-color: var(--color-acento-suave);
+  border-left: 4px solid var(--color-primario);
+  padding: 0.85rem 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: var(--color-texto);
+}
