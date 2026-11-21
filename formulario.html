@@ -3,85 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MesaClick | Reservar mesa</title>
+  <title>MesaClick | Formulario</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <header>
-    <div id="encabezado-principal">
-      <a href="index.html" class="marca">Mesa<span>Click</span></a>
-      <nav aria-label="Navegación principal">
-        <ul id="menu-navegacion">
-          <li><a href="index.html" class="enlace-nav">Inicio</a></li>
-          <li><a href="formulario.html" class="enlace-nav activo">Reservar mesa</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header id="encabezado-principal">
+    <a href="index.html" class="marca">MesaClick</a>
+    <nav aria-label="Navegación principal">
+      <ul id="menu-navegacion">
+        <li><a href="index.html" class="enlace-nav">Inicio</a></li>
+        <li><a href="formulario.html" class="enlace-nav activo">Reservar mesa</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <div class="contenedor">
-      <section class="tarjeta">
-        <h1>Formulario de reserva</h1>
-        <p>Completa los datos para solicitar una mesa en tu horario preferido.</p>
+  <main class="contenedor">
+    <!-- Estructura base del formulario -->
+    <section class="tarjeta">
+      <h1>Formulario de reserva</h1>
+      <form id="formulario-reserva" action="#" method="post">
+        <div class="grupo-campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+        </div>
 
-        <form id="formulario-reserva" action="#" method="post">
-          <div class="fila-campos">
-            <div class="grupo-campo">
-              <label for="nombre">Nombre completo</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Pérez" required>
-            </div>
-            <div class="grupo-campo">
-              <label for="telefono">Teléfono de contacto</label>
-              <input type="tel" id="telefono" name="telefono" placeholder="Ej. 809-555-0199" required>
-            </div>
-          </div>
+        <div class="grupo-campo">
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" name="fecha">
+        </div>
 
-          <div class="fila-campos">
-            <div class="grupo-campo">
-              <label for="fecha">Fecha</label>
-              <input type="date" id="fecha" name="fecha" required>
-            </div>
-            <div class="grupo-campo">
-              <label for="hora">Hora</label>
-              <input type="time" id="hora" name="hora" required>
-            </div>
-            <div class="grupo-campo">
-              <label for="personas">Personas</label>
-              <select id="personas" name="personas">
-                <option value="1">1 persona</option>
-                <option value="2" selected>2 personas</option>
-                <option value="4">4 personas</option>
-                <option value="6">6 personas</option>
-                <option value="8">8 o más personas</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="grupo-campo">
-            <label for="zona">Zona del restaurante</label>
-            <select id="zona" name="zona">
-              <option value="salon">Salón interior</option>
-              <option value="terraza">Terraza</option>
-              <option value="barra">Barra</option>
-            </select>
-          </div>
-
-          <div class="grupo-campo">
-            <label for="comentarios">Comentarios adicionales</label>
-            <textarea id="comentarios" name="comentarios" rows="3" placeholder="Alergias, celebración especial, etc."></textarea>
-          </div>
-
-          <p class="nota-estado">
-            Nota: En esta Fase 1 el formulario está maquetado visualmente y aún no procesa envíos.
-          </p>
-
-          <div>
-            <button type="submit" class="boton-principal">Solicitar reserva</button>
-          </div>
-        </form>
-      </section>
-    </div>
+        <button type="submit" class="boton-principal">Enviar</button>
+      </form>
+    </section>
   </main>
 
   <footer id="pie-pagina">
