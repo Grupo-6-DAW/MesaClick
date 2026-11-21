@@ -148,9 +148,19 @@ footer {
   box-shadow: 0 2px 8px rgba(31, 41, 55, 0.06);
 }
 
+.visor-360 {
+  perspective: 1000px;
+}
+
 .imagen-destacada {
   border-radius: 10px;
   border: 1px solid var(--color-borde);
+  transform-style: preserve-3d;
+  transition: transform 1.2s ease-in-out;
+}
+
+.visor-360:hover .imagen-destacada {
+  transform: rotateY(360deg);
 }
 
 .lista-beneficios li {
