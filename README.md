@@ -1,34 +1,44 @@
 # MesaClick
 
-Esqueleto visual de la aplicación **MesaClick** (Fase 1: Maquetación).  
-En esta etapa el proyecto contiene únicamente estructura y presentación (**HTML5** y **CSS3**), sin programación todavía.
+Aplicación web para la reserva y gestión de mesas en restaurantes.  
+En esta **Fase 1 (Maquetación)** el proyecto reúne únicamente la estructura semántica en **HTML5** y la presentación visual en **CSS3**, sin programación ni lógica de backend todavía.
 
-## Estructura y requisitos del código
+## Estructura del proyecto
 
-- **Dos páginas enlazadas:**
-  - Página de inicio sobre el tema del proyecto (`MesaClick`).
-  - Página con un formulario maquetado (sin funcionalidad aún).
-- **HTML5 semántico:**
-  - Uso de `<header>`, `<nav>`, `<main>`, `<footer>`.
-  - Al menos una lista (`<ul>` o `<ol>`), una imagen (`<img>`) y un enlace (`<a>`).
-- **Hoja de estilos externa (`.css`):**
-  - Un único archivo `.css` enlazado a ambas páginas.
-  - Uso de selectores de etiqueta, de clase (`.clase`) y de ID (`#id`).
-  - Paleta de colores consistente en todo el sitio.
+```text
+MesaClick/
+├── index.html             # Página de inicio del proyecto
+├── formulario.html        # Página con el formulario de reserva maquetado
+├── css/
+│   └── estilos.css        # Hoja de estilos compartida por ambas páginas
+├── img/
+│   └── mesaclick-banner.jpg
+└── README.md
+```
+
+## Convenciones técnicas
+
+- **HTML5 semántico:** uso de `<header>`, `<nav>`, `<main>`, `<section>` y `<footer>`, junto con listas (`<ul>`), imágenes (`<img>`) y enlaces (`<a>`) entre páginas.
+- **CSS3 externo (`css/estilos.css`):**
+  - Paleta de colores centralizada mediante variables en `:root` (`--color-primario`, `--color-secundario`, `--color-fondo`, `--color-superficie`, `--color-texto`, `--color-borde`).
+  - Combinación de selectores de etiqueta, de clase (`.tarjeta`, `.boton-principal`, etc.) y de ID (`#encabezado-principal`, `#menu-navegacion`, etc.).
+
+## Cómo visualizarlo localmente
+
+1. Clona el repositorio y ubica la rama correspondiente.
+2. Abre `index.html` directamente en tu navegador o usando la extensión **Live Server** en VS Code.
 
 ## Flujo de trabajo con Git
 
-- Rama principal: `main`
-- Rama de desarrollo (Fase 1): `fase-1-maquetacion`
+- `main`: rama principal estable.
+- `fase-1-maquetacion`: rama de integración para la Fase 1.
+- Ramas personales por integrante para desarrollar y subir sus aportes antes de integrarlos a `fase-1-maquetacion`.
 
 ```bash
-# Trabajar en la rama de la fase
-git checkout fase-1-maquetacion
-
-# Guardar y subir cambios
+# Guardar cambios en tu rama
 git add .
-git commit -m "Descripción de los cambios"
-git push -u origin fase-1-maquetacion
+git commit -m "Descripción clara de los cambios"
+git push -u origin <tu-rama>
 ```
 
-Al finalizar la fase, unir `fase-1-maquetacion` a `main` mediante **Merge** o **Pull Request**.
+Al completar la fase, se unirá `fase-1-maquetacion` con `main` mediante **Merge** o **Pull Request**.
