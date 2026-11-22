@@ -1,0 +1,131 @@
+/* Variables base de la paleta de colores */
+:root {
+  --color-primario: #c2410c;
+  --color-secundario: #1f2937;
+  --color-fondo: #faf7f2;
+  --color-superficie: #ffffff;
+  --color-texto: #1f2937;
+  --color-borde: #e5e7eb;
+}
+
+/* Selectores de etiqueta */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+}
+
+header,
+footer {
+  background-color: var(--color-secundario);
+  color: var(--color-superficie);
+  padding: 1rem;
+}
+
+main {
+  padding: 1.5rem 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Selectores de ID */
+#encabezado-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-navegacion {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+#formulario-pedido {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#pie-pagina {
+  text-align: center;
+}
+
+/* Selectores de clase */
+.contenedor {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.marca {
+  color: var(--color-superficie);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.enlace-nav {
+  color: var(--color-superficie);
+  text-decoration: none;
+}
+
+.enlace-nav.activo {
+  text-decoration: underline;
+}
+
+.tarjeta {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.imagen-destacada {
+  max-width: 480px;
+  margin: 1rem 0;
+  border-radius: 6px;
+}
+
+.lista-base {
+  padding-left: 1.25rem;
+}
+
+.grupo-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.grupo-campo input,
+.grupo-campo select,
+.grupo-campo textarea {
+  padding: 0.5rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 4px;
+  font: inherit;
+  color: inherit;
+}
+
+.boton-principal {
+  display: inline-block;
+  background-color: var(--color-primario);
+  color: var(--color-superficie);
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}

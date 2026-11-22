@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MesaClick | Hacer pedido</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header id="encabezado-principal">
+    <a href="index.html" class="marca">MesaClick</a>
+    <nav aria-label="Navegación principal">
+      <ul id="menu-navegacion">
+        <li><a href="index.html" class="enlace-nav">Inicio</a></li>
+        <li><a href="formulario.html" class="enlace-nav activo">Hacer pedido</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="tarjeta">
+      <h1>Hacer pedido</h1>
+      <form id="formulario-pedido">
+        <div class="grupo-campo">
+          <label for="mesa">Número de mesa</label>
+          <input type="number" id="mesa" name="mesa" min="1" required>
+        </div>
+
+        <div class="grupo-campo">
+          <label for="plato">Plato</label>
+          <select id="plato" name="plato" required>
+            <option value="" selected disabled>Selecciona un plato</option>
+            <option value="pollo">Pollo a la plancha</option>
+            <option value="pasta">Pasta con salsa de tomate</option>
+            <option value="ensalada">Ensalada de la casa</option>
+          </select>
+        </div>
+
+        <div class="grupo-campo">
+          <label for="cantidad">Cantidad</label>
+          <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
+        </div>
+
+        <div class="grupo-campo">
+          <label for="observaciones">Observaciones (opcional)</label>
+          <textarea id="observaciones" name="observaciones" rows="3"></textarea>
+        </div>
+
+        <div>
+          <button type="button" class="boton-principal">Hacer pedido</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  
+   <footer id="pie-pagina">
+    <p>&copy; 2026 MesaClick. Proyecto de Desarrollo de Aplicaciones Web (ISW-306).</p>
+    <p>Grupo 6 Daw</p>  
+  </footer>
+
+</body>
+</html>
